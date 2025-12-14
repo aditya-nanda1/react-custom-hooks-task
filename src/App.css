@@ -1,0 +1,95 @@
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.error {
+  color: #ff4d4d;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 0.9rem;
+  margin: 0 0 5px;
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  display: none;
+  /* Hiding price to match the image style more closely if needed, or keep it */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
